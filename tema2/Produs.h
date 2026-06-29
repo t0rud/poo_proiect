@@ -9,14 +9,14 @@ protected:
 
 public:
     Produs(const std::string& nume, float pret_baza);
-    virtual ~Produs() = default; // Destructor virtual
+    virtual ~Produs() = default; // destructor virtual
 
-    virtual float calculeaza_pret() const = 0; // Funcție virtuală pură
-    virtual Produs* clone() const = 0;         // Pentru copiere polimorfică
+    virtual float calculeaza_pret() const = 0; // functie virtuala pura
+    virtual Produs* clone() const = 0;         // pt copiere polimorfica
 
     virtual void afisare(std::ostream& os) const;
 
-    // Supraîncărcare operator<< 
+    // supraincarcare operator<< 
     friend std::ostream& operator<<(std::ostream& os, const Produs& p) {
         p.afisare(os);
         return os;

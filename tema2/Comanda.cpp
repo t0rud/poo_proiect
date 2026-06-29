@@ -1,13 +1,13 @@
 #include "Comanda.h"
 
-// 1. Constructor de copiere
+// 1. constructor de copiere
 Comanda::Comanda(const Comanda& other) {
     for (const auto* p : other.produse) {
         produse.push_back(p->clone());
     }
 }
 
-// 2. Operator de atribuire
+// 2. operator de atribuire
 Comanda& Comanda::operator=(const Comanda& other) {
     if (this != &other) {
         for (auto* p : produse) {
@@ -22,7 +22,7 @@ Comanda& Comanda::operator=(const Comanda& other) {
     return *this;
 }
 
-// 3. Destructor
+// 3. destructor
 Comanda::~Comanda() {
     for (auto* p : produse) {
         delete p;

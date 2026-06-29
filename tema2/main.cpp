@@ -8,12 +8,12 @@ int main() {
     try {
         Comanda comanda_curenta;
 
-        // Instantiem obiecte derivate
+        // instantiem obiecte derivate
         Bautura cafea_simpla("Espresso", 8.0f);
         Bautura latte_mare("Latte Macchiato", 12.0f, 2, true); // 2 shot-uri, cu lapte
         Patiserie croissant("Croissant cu unt", 7.0f, true, 2); // stoc 2
 
-        // Adaugam polimorfic in comanda
+        // adaugam polimorfic in comanda
         comanda_curenta.adauga_produs(cafea_simpla);
         comanda_curenta.adauga_produs(latte_mare);
         
@@ -23,12 +23,11 @@ int main() {
         croissant.scade_stoc();
         comanda_curenta.adauga_produs(croissant);
 
-        // Aici va arunca exceptia, stocul e deja 0
-        // croissant.scade_stoc(); 
+        // aici va arunca exceptia, stocul e deja 0
 
         std::cout << comanda_curenta << "\n";
 
-        // Testam Rule of 3 (Constructorul de copiere)
+        // testam rule of 3 (constructorul de copiere)
         Comanda copie_comanda = comanda_curenta;
         std::cout << "--- Afisare copie comanda ---\n";
         std::cout << copie_comanda << "\n";

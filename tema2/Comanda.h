@@ -10,7 +10,7 @@ private:
 public:
     Comanda() = default;
 
-    // Rule of 3
+    // rule of 3
     Comanda(const Comanda& other);
     Comanda& operator=(const Comanda& other);
     ~Comanda();
